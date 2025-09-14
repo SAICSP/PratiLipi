@@ -1,0 +1,120 @@
+.sidebar{
+    background-color: #171717;
+    color: #b4b4b4;
+    height: 100vh;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #fff;
+}
+
+button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid ;
+    background-color: transparent;
+
+}
+
+button:hover{
+    background-color:rgba(255, 255, 255, 0.2) ;
+}
+button span{
+    font-size: 20px;
+} 
+
+.history{
+    margin: 10px;
+    padding: 10px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.history li{
+    list-style-type: none;
+    cursor: pointer;
+    padding: 2px 5px;
+    margin-bottom: 0.3rem;
+    font-size: 14px;
+    border: solid 10px transparent;
+    position:  relative;
+}
+
+.history li:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.sign{
+    text-align: center;
+    padding: 10px; margin: 10px; font-size: 10x; 
+    border-top: solid 0.3px rgba(255, 255, 255,0.5);
+}
+
+.fa-trash{
+    opacity: 0;
+    position: absolute;
+    right: 0;
+}
+
+.history li:hover .fa-trash{
+    opacity: 1;
+    color:#fff;
+}
+
+.fa-trash:hover{
+    color: red !important;
+}
+
+.highlighted{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 14px;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        /* hidden */
+        z-index: 999;
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+        /* visible */
+    }
+
+    .hamburger {
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        font-size: 24px;
+        background: none;
+        border: none;
+        color: #fff;
+        z-index: 1000;
+        cursor: pointer;
+    }
+}
+
+/* Desktop view */
+@media (min-width: 769px) {
+    .hamburger {
+        display: none;
+        /* hide hamburger on desktop */
+    }
+}
