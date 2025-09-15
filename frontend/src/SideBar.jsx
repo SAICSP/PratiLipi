@@ -19,18 +19,18 @@ function SideBar() {
 
   const getAllThreads = async () => {
     try {
-      const response = await fetch("http://localhost:8080/api/thread");
+      const response = await fetch("https://pratilipibackend.onrender.com/api/thread");
       const res = await response.json();
       const filteredData = res.map(thread => ({ threadId: thread.threadId, title: thread.title }));
       setAllThreads(filteredData);
     } catch (err) {
-      console.log("somethin went wront", err);
+      console.log("something went wrong", err);
     }
   };
 
   useEffect(() => {
     getAllThreads();
-  }, []); // 👈 add [] to prevent infinite fetch loop
+  }, []); // 👈 prevent infinite fetch loop
 
   const createNewChat = async () => {
     setNewChat(true);
@@ -44,7 +44,7 @@ function SideBar() {
   const changeThread = async (newthreadId) => {
     setCurrThreadId(newthreadId);
     try {
-      const response = await fetch(`http://localhost:8080/api/thread/${newthreadId}`)
+      const response = await fetch(`https://pratilipibackend.onrender.com/api/thread/${newthreadId}`);
       const res = await response.json();
       setPrevChats(res);
       setNewChat(false);
@@ -57,7 +57,7 @@ function SideBar() {
 
   const deleteThread = async (threadId) => {
     try {
-      const response = await fetch(`http://localhost:8080/api/thread/${threadId}`, { method: "DELETE" });
+      const response = await fetch(`https://pratilipibackend.onrender.com/api/thread/${threadId}`, { method: "DELETE" });
       const res = await response.json();
       console.log(res);
       setAllThreads(prev => prev.filter(thread => thread.threadId !== threadId));

@@ -92,10 +92,7 @@ const handleUserClick=()=>{
         <ScaleLoader loading={load} color="#fff"  ></ScaleLoader> 
         <ScaleLoader loading={load} color="#fff"  ></ScaleLoader> 
         <ScaleLoader loading={load} color="#fff"  ></ScaleLoader> 
-        <ScaleLoader loading={load} color="#fff"  ></ScaleLoader> 
-        <ScaleLoader loading={load} color="#fff"  ></ScaleLoader> 
-        <ScaleLoader loading={load} color="#fff"  ></ScaleLoader> 
-        <ScaleLoader loading={load} color="#fff"  ></ScaleLoader> 
+        
 
         </div>
         
