@@ -68,7 +68,7 @@ const handleUserClick=()=>{
     <div className='chatwindow'>
         
         <div className='navbar'>
-            <span className='gpttext'>ChatGPT<i className="fa-solid  fa-chevron-down"></i></span>
+            <span className='gpttext'>PratiLipi<i className="fa-solid  fa-chevron-down"></i></span>
             <div className="userIconDiv" onClick={handleUserClick}>
                 {/* <span className='userIcon'><i className="fa-solid fa-user"></i></span> */}
                 
@@ -113,7 +113,7 @@ const handleUserClick=()=>{
                 <div id="submit" onClick={getReply}><i className="fa-solid fa-paper-plane"></i></div>
             </div>
             <p className="info">
-            ChatGPT can make mistakes. Check important info. See Cookie Preferences.
+            PratiLipi can make mistakes. Check important info. See Cookie Preferences.
             </p>
         </div>
 
